@@ -4,7 +4,7 @@
 
 USR_DIR=/app
 PROBLEM=wikification
-DATA_DIR=$HOME/t2t_data
+DATA_DIR=$USR_DIR/t2t_data
 TMP_DIR=/tmp/t2t_datagen
 mkdir -p $DATA_DIR $TMP_DIR
 

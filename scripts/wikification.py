@@ -8,7 +8,7 @@ import re
 class Wikification(text_problems.Text2TextProblem):
     @property
     def approx_vocab_size(self):
-        return 2011
+        return 24638
 
     @property
     def is_generate_per_split(self):

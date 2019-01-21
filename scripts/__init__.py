@@ -1,1 +1,1 @@
-import wikification
+from app.wikification import Wikification as wikification
