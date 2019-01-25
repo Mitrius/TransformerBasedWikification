@@ -8,7 +8,7 @@ import re
 class Wikification(text_problems.Text2TextProblem):
     @property
     def approx_vocab_size(self):
-        return 24638
+        return 12003
 
     @property
     def is_generate_per_split(self):
@@ -32,7 +32,8 @@ class Wikification(text_problems.Text2TextProblem):
         del tmp_dir
         del dataset_split
 
-        with open("data/clean.csv") as data_clean, open("data/marked.csv") as data_marked:
-            for input_line, target_line in zip(data_marked, data_clean):
-                yield {"inputs": re.sub("[^a-z ]+", " ", input_line.strip().lower()),
-                       "targets": re.sub("[^a-z ]+", " ", target_line.strip().lower())}
+        with open("data/input.csv") as input:
+            for line in input:
+                line_out = line.strip().split(',')
+                yield {"inputs": re.sub("[^a-z ]+", " ", line_out[0]),
+                       "targets": re.sub("[^a-z ]+", " ", line[1])}

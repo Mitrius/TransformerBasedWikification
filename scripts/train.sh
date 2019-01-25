@@ -16,6 +16,6 @@ t2t-trainer \
   --train_steps=10000 \
   --eval_throttle_seconds=1 \
   --eval_steps=1000 \
-  --worker_gpu_memory_fraction=0.8 \
+  --worker_gpu_memory_fraction=0.6 \
   --hparams_set=$HPARAMS \
   --output_dir=$TRAIN_DIR

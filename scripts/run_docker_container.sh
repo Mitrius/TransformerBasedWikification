@@ -1,6 +1,6 @@
 #!/bin/bash
 docker rm -f transformers
-optirun docker run -it \
+docker run -it \
         --runtime=nvidia \
         --name transformers \
         transformers \
