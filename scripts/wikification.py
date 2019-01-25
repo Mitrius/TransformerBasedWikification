@@ -35,5 +35,6 @@ class Wikification(text_problems.Text2TextProblem):
         with open("data/input.csv") as input:
             for line in input:
                 line_out = line.strip().split(',')
-                yield {"inputs": re.sub("[^a-z ]+", " ", line_out[0]),
-                       "targets": re.sub("[^a-z ]+", " ", line[1])}
+                print(line)
+                yield {"inputs": line_out[0],
+                       "targets": line_out[1]}

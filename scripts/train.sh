@@ -13,7 +13,7 @@ t2t-trainer \
   --data_dir=$DATA_DIR \
   --problem=$PROBLEM \
   --model=$MODEL \
-  --train_steps=10000 \
+  --train_steps=3000 \
   --eval_throttle_seconds=1 \
   --eval_steps=1000 \
   --worker_gpu_memory_fraction=0.6 \
